@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<p id="currentDate"></p>
+<p id="currentDate1"></p>
+
+<body>
+    <script>
+        var date_object = new Date();
+        var dd = String(date_object.getDate()).padStart(2, '0');
+        var mm = String(date_object.getMonth() + 1).padStart(2, '0');
+        var yyyy = date_object.getFullYear();
+        formated_date = `${mm}-${dd}-${yyyy}`;
+        document.getElementById("currentDate").innerText = formated_date;
+        formated_date = `${mm}/${dd}/${yyyy}`;
+        document.getElementById("currentDate1").innerText = formated_date;
+    </script>
+</body>
+
+</html>
